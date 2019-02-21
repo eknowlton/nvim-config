@@ -72,4 +72,6 @@ if isdirectory('.git')
     let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 endif
 
+let test#strategy = "neoterm"
+
 set secure
