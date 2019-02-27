@@ -42,12 +42,14 @@ let g:ale_fixers = {
 \ 'typescript.jsx': ['prettier'],
 \ 'sh': ['shfmt'],
 \ 'ruby': ['standardrb'],
+\ 'go': ['gofmt'],
 \}
 
 let g:ale_linters = {
 \ 'typescript': ['tslint', 'tsserver', 'typecheck'],
 \ 'typescript.tsx': ['tslint', 'tsserver', 'typecheck'],
-\ 'ruby': ['standardrb', 'rails_best_practices', 'brakeman', 'reek']
+\ 'ruby': ['standardrb', 'rails_best_practices', 'brakeman', 'reek'],
+\ 'go': ['gofmt', 'govet', 'golint', 'golangserver']
 \ }
 
 let g:ale_php_langserver_use_global = 1
