@@ -8,7 +8,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 
 Plug 'Shougo/denite.nvim'
-Plug 'kien/ctrlp.vim'
 
 Plug 'w0rp/ale'
 
@@ -36,4 +35,3 @@ Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
-
