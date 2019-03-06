@@ -50,6 +50,7 @@ let g:lmap.w = { 'name' : '+ Windows',
 "----- Language
 let g:lmap.l = { 'name' : 'Language',
                \ 'p' : ['ALEFix', 'Run Fixer'],
+               \ 'd' : ['ALEDetail', 'Show lint detail'],
                \ 'g' : ['ALEGoToDefinition', 'Go To Definition'],
                \ }
 
