@@ -45,6 +45,8 @@ let g:ale_fixers = {
 \ 'sh': ['shfmt'],
 \ 'ruby': ['standardrb'],
 \ 'go': ['gofmt'],
+\ 'json': ['prettier'],
+\ 'html': ['prettier'],
 \}
 
 let g:ale_linters = {
