@@ -13,6 +13,7 @@ set expandtab
 set smartindent
 set nocompatible
 
+autocmd filetype crontab setlocal nobackup nowritebackup
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType sh setlocal ts=2 sts=2 sw=2
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2
@@ -52,7 +53,7 @@ let g:ale_fixers = {
 let g:ale_linters = {
 \ 'typescript': ['tslint', 'tsserver', 'typecheck'],
 \ 'typescript.tsx': ['tslint', 'tsserver', 'typecheck'],
-\ 'ruby': ['standardrb', 'rails_best_practices', 'brakeman', 'reek'],
+\ 'ruby': ['standardrb', 'rails_best_practices', 'brakeman', 'reek', 'solargraph'],
 \ 'go': ['gofmt', 'govet', 'golint', 'golangserver']
 \ }
 
