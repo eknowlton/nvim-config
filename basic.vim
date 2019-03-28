@@ -67,8 +67,6 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.erb,*.tsx'
 
 let test#strategy = "vimux"
 
-let g:VimuxRunnerType = "window"
-
 command! MyGF call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --cached --others'}))
 
 set secure
