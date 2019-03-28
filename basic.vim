@@ -65,7 +65,9 @@ let g:ale_fix_on_save = 1
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb,*.jsx,*.tsx"
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.erb,*.tsx'
 
-let test#strategy = "neovim"
+let test#strategy = "vimux"
+
+let g:VimuxRunnerType = "window"
 
 command! MyGF call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --cached --others'}))
 
