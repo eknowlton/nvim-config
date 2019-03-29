@@ -13,7 +13,7 @@ set expandtab
 set smartindent
 set nocompatible
 
-autocmd filetype crontab setlocal nobackup nowritebackup
+autocmd FileType crontab setlocal nobackup nowritebackup
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType sh setlocal ts=2 sts=2 sw=2
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2
@@ -21,6 +21,8 @@ autocmd FileType typescript.tsx setlocal ts=2 sts=2 sw=2
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2
 autocmd FileType php setlocal ts=4 sts=4 sw=4
 autocmd FileType cpp setlocal ts=4 sts=4 sw=4
+
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=ansible
 
 inoremap jk <Esc>
 tnoremap <Esc> <C-\><C-n>
@@ -48,6 +50,7 @@ let g:ale_fixers = {
 \ 'go': ['gofmt'],
 \ 'json': ['prettier'],
 \ 'html': ['prettier'],
+\ 'yaml': ['prettier'],
 \}
 
 let g:ale_linters = {

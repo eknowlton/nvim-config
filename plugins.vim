@@ -35,5 +35,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'benmills/vimux'
 
+Plug 'chase/vim-ansible-yaml'
+
 " Initialize plugin system
 call plug#end()
