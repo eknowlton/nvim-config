@@ -4,7 +4,7 @@ set encoding=UTF-8
 
 colorscheme brogrammer
 
-set number
+set number 
 set relativenumber
 set cursorline
 set undofile
@@ -48,9 +48,10 @@ let g:ale_fixers = {
 \ 'sh': ['shfmt'],
 \ 'ruby': ['standardrb'],
 \ 'go': ['gofmt'],
+\ 'yaml': ['prettier'],
+\ 'css': ['prettier'],
 \ 'json': ['prettier'],
 \ 'html': ['prettier'],
-\ 'yaml': ['prettier'],
 \}
 
 let g:ale_linters = {
