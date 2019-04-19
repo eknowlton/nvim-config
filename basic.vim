@@ -65,8 +65,8 @@ let g:airline#extensions#ale#enabled = 1
 
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
-highlight ALEErrorSign ctermbg=NONE ctermfg=red
-highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+highlight ALEErrorSign ctermbg=236 ctermfg=red
+highlight ALEWarningSign ctermbg=236 ctermfg=yellow
 
 let g:ale_php_langserver_use_global = 1
 let g:ale_php_langserver_executable = $HOME.'/.composer/vendor/bin/php-language-server.php'
