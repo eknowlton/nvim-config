@@ -80,4 +80,6 @@ let test#strategy = "vimux"
 
 command! MyGF call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --cached --others'}))
 
+let g:airline_powerline_fonts = 1
+
 set secure
