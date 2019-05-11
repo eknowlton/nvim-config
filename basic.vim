@@ -4,7 +4,7 @@ set encoding=UTF-8
 
 colorscheme brogrammer
 
-set number 
+set number
 set relativenumber
 set cursorline
 set undofile
@@ -52,14 +52,18 @@ let g:ale_fixers = {
 \ 'css': ['prettier'],
 \ 'json': ['prettier'],
 \ 'html': ['prettier'],
+\ 'rust': ['rustfmt']
 \}
 
 let g:ale_linters = {
 \ 'typescript': ['tslint', 'tsserver', 'typecheck'],
 \ 'typescript.tsx': ['tslint', 'tsserver', 'typecheck'],
 \ 'ruby': ['standardrb', 'rails_best_practices', 'brakeman', 'reek', 'solargraph'],
-\ 'go': ['gofmt', 'govet', 'golint', 'golangserver']
+\ 'go': ['gofmt', 'govet', 'golint', 'golangserver'],
+\ 'rust': ['rls']
 \ }
+
+let g:ale_rust_rls_toolchain = 'stable-x86_64-unknown-linux-gnu'
 
 let g:ale_php_langserver_use_global = 1
 let g:ale_php_langserver_executable = $HOME.'/.composer/vendor/bin/php-language-server.php'

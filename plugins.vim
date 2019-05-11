@@ -37,5 +37,7 @@ Plug 'benmills/vimux'
 
 Plug 'chase/vim-ansible-yaml'
 
+Plug 'rust-lang/rust.vim'
+
 " Initialize plugin system
 call plug#end()
