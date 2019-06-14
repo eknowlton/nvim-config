@@ -52,7 +52,7 @@ let g:ale_fixers = {
 \ 'css': ['prettier'],
 \ 'json': ['prettier'],
 \ 'html': ['prettier'],
-\ 'rust': ['rustfmt']
+\ 'rust': ['rustfmt'],
 \}
 
 let g:ale_linters = {
@@ -60,15 +60,23 @@ let g:ale_linters = {
 \ 'typescript.tsx': ['tslint', 'tsserver', 'typecheck'],
 \ 'ruby': ['standardrb', 'rails_best_practices', 'brakeman', 'reek', 'solargraph'],
 \ 'go': ['gofmt', 'govet', 'golint', 'golangserver'],
-\ 'rust': ['rls']
+\ 'rust': ['cargo', 'rls', 'rustc']
 \ }
 
 let g:ale_rust_rls_toolchain = 'stable-x86_64-unknown-linux-gnu'
+
+let g:airline#extensions#ale#enabled = 1
+
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+highlight ALEErrorSign ctermbg=236 ctermfg=red
+highlight ALEWarningSign ctermbg=236 ctermfg=yellow
 
 let g:ale_php_langserver_use_global = 1
 let g:ale_php_langserver_executable = $HOME.'/.composer/vendor/bin/php-language-server.php'
 
 let g:ale_fix_on_save = 1
+let g:ale_set_balloons = 1
 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb,*.jsx,*.tsx"
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.erb,*.tsx'
@@ -76,5 +84,7 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.erb,*.tsx'
 let test#strategy = "vimux"
 
 command! MyGF call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --cached --others'}))
+
+let g:airline_powerline_fonts = 1
 
 set secure
