@@ -64,6 +64,8 @@ let g:ale_linters = {
 \ 'rust': ['cargo', 'rls']
 \ }
 
+let g:ale_rust_rls_toolchain = 'stable-x86_64-unknown-linux-gnu'
+
 let g:airline#extensions#ale#enabled = 1
 
 let g:ale_sign_error = ''
