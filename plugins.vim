@@ -37,5 +37,7 @@ Plug 'benmills/vimux'
 
 Plug 'chase/vim-ansible-yaml'
 
+Plug 'cespare/vim-toml'
+
 " Initialize plugin system
 call plug#end()

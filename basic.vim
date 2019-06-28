@@ -21,6 +21,7 @@ autocmd FileType typescript.tsx setlocal ts=2 sts=2 sw=2
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2
 autocmd FileType php setlocal ts=4 sts=4 sw=4
 autocmd FileType cpp setlocal ts=4 sts=4 sw=4
+autocmd VimEnter *.jrnl $pu=strftime('%n# %a, %d %b %Y %T %z%n%n')
 
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=ansible
 
@@ -56,11 +57,11 @@ let g:ale_fixers = {
 \}
 
 let g:ale_linters = {
-\ 'typescript': ['tslint', 'tsserver', 'typecheck'],
-\ 'typescript.tsx': ['tslint', 'tsserver', 'typecheck'],
+\ 'typescript': ['eslint', 'tslint', 'tsserver', 'typecheck'],
+\ 'typescript.tsx': ['eslint', 'tslint', 'tsserver', 'typecheck'],
 \ 'ruby': ['standardrb', 'rails_best_practices', 'brakeman', 'reek', 'solargraph'],
 \ 'go': ['gofmt', 'govet', 'golint', 'golangserver'],
-\ 'rust': ['cargo', 'rls', 'rustc']
+\ 'rust': ['cargo', 'rls']
 \ }
 
 let g:airline#extensions#ale#enabled = 1
@@ -86,3 +87,4 @@ command! MyGF call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard 
 let g:airline_powerline_fonts = 1
 
 set secure
+set mouse=a
