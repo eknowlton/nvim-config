@@ -54,6 +54,7 @@ let g:ale_fixers = {
 \ 'json': ['prettier'],
 \ 'html': ['prettier'],
 \ 'rust': ['rustfmt'],
+\ 'php': ['php_cs_fixer', 'phpcbf'],
 \}
 
 let g:ale_linters = {
@@ -63,6 +64,9 @@ let g:ale_linters = {
 \ 'go': ['gofmt', 'govet', 'golint', 'golangserver'],
 \ 'rust': ['cargo', 'rls']
 \ }
+
+let g:ale_php_phpcs_standard = 'PSR2'
+let g:ale_php_phpcbf_standard = 'PSR2'
 
 let g:ale_rust_rls_toolchain = 'stable-x86_64-unknown-linux-gnu'
 
