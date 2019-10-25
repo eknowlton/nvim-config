@@ -40,7 +40,26 @@ Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
 
 Plug 'StanAngeloff/php.vim'
-Plug 'stephpy/vim-php-cs-fixer'
+
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
 
 " Initialize plugin system
 call plug#end()
