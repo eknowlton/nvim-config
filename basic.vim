@@ -30,67 +30,14 @@ tnoremap <Esc> <C-\><C-n>
 
 set clipboard+=unnamedplus
 
-set completeopt=menu,menuone,preview,noselect,noinsert
-let g:ale_completion_enabled = 1
-
-" Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
-
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" : "\<TAB>"
-
-let g:ale_set_highlights = 0
-
-let g:ale_fixers = {
-\ '*': ['remove_trailing_lines', 'trim_whitespace'],
-\ 'javascript': ['prettier'],
-\ 'typescript': ['prettier'],
-\ 'typescript.jsx': ['prettier'],
-\ 'sh': ['shfmt'],
-\ 'ruby': ['standardrb'],
-\ 'go': ['gofmt'],
-\ 'yaml': ['prettier'],
-\ 'css': ['prettier'],
-\ 'json': ['prettier'],
-\ 'html': ['prettier'],
-\ 'rust': ['rustfmt'],
-\ 'php': ['php_cs_fixer', 'phpcbf'],
-\}
-
-let g:ale_linters = {
-\ 'typescript': ['eslint', 'tslint', 'tsserver', 'typecheck'],
-\ 'typescript.tsx': ['eslint', 'tslint', 'tsserver', 'typecheck'],
-\ 'ruby': ['standardrb', 'rails_best_practices', 'brakeman', 'reek', 'solargraph'],
-\ 'go': ['gofmt', 'govet', 'golint', 'golangserver'],
-\ 'rust': ['cargo', 'rls']
-\ }
-
-let g:ale_php_phpcs_standard = 'PSR2'
-let g:ale_php_phpcbf_standard = 'PSR2'
-
-let g:ale_rust_rls_toolchain = 'stable-x86_64-unknown-linux-gnu'
-
-let g:airline#extensions#ale#enabled = 1
-
-let g:ale_sign_error = ''
-let g:ale_sign_warning = ''
-highlight ALEErrorSign ctermbg=236 ctermfg=red
-highlight ALEWarningSign ctermbg=236 ctermfg=yellow
-
-let g:ale_php_langserver_use_global = 1
-let g:ale_php_langserver_executable = $HOME.'/.composer/vendor/bin/php-language-server.php'
-
-let g:ale_fix_on_save = 1
-let g:ale_set_balloons = 1
 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb,*.jsx,*.tsx"
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.erb,*.tsx'
 
-let test#strategy = "vimux"
+let test#strategy = "shtuff"
+let g:shtuff_receiver = 'devrunner'
 
 command! MyGF call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --cached --others'}))
-
-let g:ale_rust_rls_toolchain = ''
 
 let g:airline_powerline_fonts = 1
 

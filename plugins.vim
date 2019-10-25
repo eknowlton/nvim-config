@@ -9,16 +9,15 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'Shougo/denite.nvim'
 
-Plug 'w0rp/ale'
-
 Plug 'francoiscabrol/ranger.vim' | Plug 'rbgrouleff/bclose.vim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 Plug 'alvan/vim-closetag'
 
-Plug 'kassio/neoterm'
 Plug 'janko-m/vim-test'
 
 Plug 'jiangmiao/auto-pairs'
@@ -39,6 +38,9 @@ Plug 'chase/vim-ansible-yaml'
 
 Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
+
+Plug 'StanAngeloff/php.vim'
+Plug 'stephpy/vim-php-cs-fixer'
 
 " Initialize plugin system
 call plug#end()
