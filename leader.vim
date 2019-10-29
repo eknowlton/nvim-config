@@ -47,14 +47,6 @@ let g:lmap.w = { 'name' : '+ Windows',
 	       \ '=': ['wincmd =', 'Resize Equally'],
 	       \ }
 
-"----- Language
-let g:lmap.l = { 'name' : 'Language',
-               \ 'p' : ['ALEFix', 'Run Fixer'],
-               \ 'd' : ['ALEDetail', 'Show lint detail'],
-               \ 'h' : ['ALEHover', 'Show hover'],
-               \ 'g' : ['ALEGoToDefinition', 'Go To Definition'],
-               \ }
-
 "----- Git
 let g:lmap.g = { 'name' : 'Git',
                \ 'a' : ['Gwrite', 'Git Add File'],

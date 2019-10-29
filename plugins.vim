@@ -18,7 +18,7 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 Plug 'alvan/vim-closetag'
 
-Plug 'janko-m/vim-test'
+Plug 'janko/vim-test'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
