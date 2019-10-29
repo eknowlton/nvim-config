@@ -15,13 +15,16 @@ set nocompatible
 
 autocmd FileType crontab setlocal nobackup nowritebackup
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType json setlocal ts=2 sts=2 sw=2
 autocmd FileType sh setlocal ts=2 sts=2 sw=2
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2
 autocmd FileType typescript.tsx setlocal ts=2 sts=2 sw=2
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2
 autocmd FileType php setlocal ts=4 sts=4 sw=4
 autocmd FileType cpp setlocal ts=4 sts=4 sw=4
+
 autocmd VimEnter *.jrnl $pu=strftime('%n# %a, %d %b %Y %T %z%n%n')
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=ansible
 
