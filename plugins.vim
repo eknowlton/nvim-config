@@ -18,7 +18,7 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 Plug 'alvan/vim-closetag'
 
-Plug 'janko/vim-test'
+Plug 'janko-m/vim-test'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
@@ -40,6 +40,7 @@ Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
 
 Plug 'StanAngeloff/php.vim'
+Plug 'stephpy/vim-php-cs-fixer'
 
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
