@@ -30,6 +30,9 @@ au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=ansible
 
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
 inoremap jk <Esc>
 tnoremap <Esc> <C-\><C-n>
 

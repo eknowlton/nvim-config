@@ -62,5 +62,7 @@ Plug 'prettier/vim-prettier', {
     \ 'html',
     \ 'swift' ] }
 
+Plug 'jparise/vim-graphql'
+
 " Initialize plugin system
 call plug#end()
