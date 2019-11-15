@@ -32,6 +32,22 @@ let g:lmap.b = { 'name' : 'Buffers',
                \ }
 
 "----- Window
+function! MaximizeToggle()
+  if exists("s:maximize_session")
+    exec "source " . s:maximize_session
+    call delete(s:maximize_session)
+    unlet s:maximize_session
+    let &hidden=s:maximize_hidden_save
+    unlet s:maximize_hidden_save
+  else
+    let s:maximize_hidden_save = &hidden
+    let s:maximize_session = tempname()
+    set hidden
+    exec "mksession! " . s:maximize_session
+    only
+  endif
+endfunction
+
 autocmd VimResized * :wincmd =
 set splitbelow
 set splitright
@@ -43,7 +59,7 @@ let g:lmap.w = { 'name' : '+ Windows',
 	       \ 'l' : ['wincmd l', 'Move Right'],
 	       \ 'j' : ['wincmd j', 'Move Down'],
 	       \ 'k' : ['wincmd k', 'Move Up'],
-	       \ 'o' : ['wincmd o', 'Close Others'],
+	       \ 't' : ['call MaximizeToggle()', 'Close Others'],
 	       \ '=': ['wincmd =', 'Resize Equally'],
 	       \ }
 
