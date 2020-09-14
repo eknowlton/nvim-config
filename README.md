@@ -2,7 +2,7 @@
 
 ### Features
 - Leader Key Mapping
-- ALE Asyncronous Linting & Fixing
+- Coc
 - Status Line
 - Fugitive
 - Project specific `.vimrc`
