@@ -13,9 +13,6 @@ Plug 'francoiscabrol/ranger.vim' | Plug 'rbgrouleff/bclose.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-
 Plug 'alvan/vim-closetag'
 
 Plug 'janko-m/vim-test'
