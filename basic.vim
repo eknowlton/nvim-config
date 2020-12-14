@@ -3,6 +3,7 @@ set exrc
 set encoding=UTF-8
 
 colorscheme brogrammer
+"colorscheme xcodelighthc
 
 set number
 set relativenumber
@@ -35,6 +36,8 @@ autocmd BufEnter *.jsx set filetype=javascript.jsx
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 inoremap jk <Esc>
 tnoremap <Esc> <C-\><C-n>
@@ -81,7 +84,17 @@ let g:shtuff_receiver = 'devrunner'
 
 command! MyGF call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --cached --others'}))
 
+let g:fzf_layout = { 'window': 'enew' }
+
 let g:airline_powerline_fonts = 1
+
+" dict
+" Disables auto-close if not in a "valid" region (based on filetype)
+"
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ }
 
 set secure
 set mouse=a

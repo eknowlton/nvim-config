@@ -2,11 +2,14 @@
 nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
 
+let g:leaderGuide_mode_local_only = 0
+
 call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
 
 let g:lmap = {}
+
 
 "----- Files
 let g:ranger_map_keys = 0 " Ranger auto maps this to <leader>f

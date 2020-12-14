@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/ethan/.config/polybar'
+let g:netrw_dirhist_4='/home/ethan/Projects/kimmel.com'
+let g:netrw_dirhist_3='/home/ethan/Projects/bcrsv2/frontend'
+let g:netrw_dirhist_2='/home/ethan/.local/bin'
+let g:netrw_dirhist_1='/tmp'
+let g:netrw_dirhist_0='/'
+let g:netrw_dirhist_9='/tmp'
+let g:netrw_dirhist_8='/home/ethan/.config/dunst'
+let g:netrw_dirhist_7='/home/ethan/.aws'
+let g:netrw_dirhist_6='/home/ethan/.local/bin'
