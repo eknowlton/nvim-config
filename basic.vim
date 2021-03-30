@@ -1,4 +1,5 @@
 set exrc
+set secure
 
 set encoding=UTF-8
 
@@ -17,12 +18,15 @@ set nocompatible
 autocmd FileType crontab setlocal nobackup nowritebackup
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType json setlocal ts=2 sts=2 sw=2
+autocmd FileType zsh setlocal ts=2 sts=2 sw=2
 autocmd FileType sh setlocal ts=2 sts=2 sw=2
+autocmd FileType c setlocal ts=4 sts=4 sw=4
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2
 autocmd FileType typescript.tsx setlocal ts=2 sts=2 sw=2
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2
 autocmd FileType php setlocal ts=4 sts=4 sw=4
-autocmd FileType cpp setlocal ts=4 sts=4 sw=4
+autocmd FileType ccpp setlocal ts=4 sts=4 sw=4
+autocmd FileType xml setlocal ts=2 sts=2 sw=2
 
 autocmd VimEnter *.jrnl $pu=strftime('%n# %a, %d %b %Y %T %z%n%n')
 autocmd FileType json syntax match Comment +\/\/.\+$+
@@ -36,6 +40,7 @@ autocmd BufEnter *.jsx set filetype=javascript.jsx
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+let g:prettier#exec_cmd_path = "/home/ethan/.asdf/shims/prettier"
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 

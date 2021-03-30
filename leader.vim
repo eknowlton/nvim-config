@@ -2,20 +2,17 @@
 nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
 
-let g:leaderGuide_mode_local_only = 0
+call which_key#register('<Space>', "g:which_key_map")
 
-call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
-nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
-vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
-
-let g:lmap = {}
-
+nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 
 "----- Files
 let g:ranger_map_keys = 0 " Ranger auto maps this to <leader>f
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:lmap.f = { 'name' : 'Files',
+let g:which_key_map = {}
+let g:which_key_map['f'] = { 'name' : 'Files',
 	       \ 'r' : ['Ranger', 'Find Files (Ranger)'],
 	       \ 'F' : ['call fzf#run()', 'Find Files (FZF)'],
 	       \ 'f' : ['MyGF', 'Find All Files (Custom GFiles)'],
@@ -25,7 +22,7 @@ let g:lmap.f = { 'name' : 'Files',
                \ }
 
 "----- Buffers
-let g:lmap.b = { 'name' : 'Buffers',
+let g:which_key_map.b = { 'name' : 'Buffers',
                \ 'b' : [':CtrlPBuffer', 'CtrlP Buffers'],
                \ 'r' : ['e', 'Reload Buffer'],
                \ 'd' : ['bd', 'Delete Buffer'],
@@ -54,7 +51,7 @@ endfunction
 autocmd VimResized * :wincmd =
 set splitbelow
 set splitright
-let g:lmap.w = { 'name' : '+ Windows',
+let g:which_key_map.w = { 'name' : '+ Windows',
 	       \ 'd' : ['close', 'Close Window'],
 	       \ 's' : ['split', 'Horizontal Split'],
 	       \ 'v' : ['vsplit', 'Vertical Split'],
@@ -67,29 +64,39 @@ let g:lmap.w = { 'name' : '+ Windows',
 	       \ }
 
 "----- Git
-let g:lmap.g = { 'name' : 'Git',
+let g:which_key_map.g = { 'name' : 'Git',
                \ 'a' : ['Gwrite', 'Git Add File'],
                \ 'b' : ['Gblame', 'Git Blame'],
                \ 'c' : ['Gcommit', 'Git Commit'],
                \ 'd' : ['Gdiff', 'Git Diff'],
-               \ 'f' : ['Gfetch', 'Git Fetch'],
-               \ 'F' : ['Gpull', 'Git Pull'],
-               \ 'P' : ['Gpush', 'Git Push'],
+               \ 'f' : ['Git fetch', 'Git Fetch'],
+               \ 'F' : ['Git pull', 'Git Pull'],
+               \ 'P' : ['Git push', 'Git Push'],
                \ 'r' : ['Gread', 'Git Reset File'],
                \ 's' : ['Gstatus', 'Git Status'],
+               \ 'g' : ['Flog', 'Git Flog'],
+               \ 'G' : ['Flogsplit', 'Git Flogsplit'],
+               \ }
+
+"----- Deno
+let g:which_key_map.t = { 'name' : 'Deno',
+               \ 'c' : ['CocCommand deno.cache', 'Cache dependencies'],
+               \ 's' : ['CocCommand deno.status', 'Display language server status'],
+               \ 'i' : ['CocCommand deno.initializeWorkspace', 'Initialize deno workspace'],
                \ }
 
 "----- Testing
-let g:lmap.t = { 'name' : 'Testing',
+let g:which_key_map.t = { 'name' : 'Testing',
                \ 'n' : ['TestNearest', 'Nearest'],
                \ 'f' : ['TestFile', 'File'],
                \ 's' : ['TestSuite', 'Suite'],
                \ 'l' : ['TestLast', 'Last'],
                \ 'v' : ['TestVisit', 'Visit Last'],
+               \ 'r' : ['!gcc -o main % && ./main', 'Compile & Run'],
                \ }
 
 "----- Quit
-let g:lmap.q = { 'name' : '+ Quit',
+let g:which_key_map.q = { 'name' : '+ Quit',
                \ 'q' : ['qa', 'Quit All'],
                \ 'Q' : ['qa!', 'Force Quit All'],
                \ }

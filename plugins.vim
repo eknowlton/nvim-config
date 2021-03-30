@@ -2,10 +2,13 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
 
-Plug 'spinks/vim-leader-guide'
+" Plug 'spinks/vim-leader-guide'
+"
+Plug 'liuchengxu/vim-which-key'
 
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
 
 Plug 'Shougo/denite.nvim'
 
@@ -40,7 +43,7 @@ Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
+  \ 'do': 'npm install',
   \ 'branch': 'release/1.x',
   \ 'for': [
     \ 'javascript',
@@ -60,6 +63,10 @@ Plug 'prettier/vim-prettier', {
     \ 'swift' ] }
 
 Plug 'jparise/vim-graphql'
+
+Plug 'hashivim/vim-terraform'
+
+Plug 'ruanyl/vim-gh-line'
 
 " Initialize plugin system
 call plug#end()
