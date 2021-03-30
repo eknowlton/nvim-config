@@ -12,6 +12,9 @@ let g:ranger_map_keys = 0 " Ranger auto maps this to <leader>f
 
 let g:which_key_map = {}
 
+let g:which_key_map.p = { 'name': 'which_key_ignore' }
+let g:which_key_map.b = { 'name': 'which_key_ignore' }
+
 let g:which_key_map['f'] = { 'name' : 'Files',
 	       \ 'r' : ['Ranger', 'Find Files (Ranger)'],
 	       \ 'F' : ['call fzf#run()', 'Find Files (FZF)'],
