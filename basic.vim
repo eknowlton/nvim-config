@@ -4,7 +4,6 @@ set secure
 set encoding=UTF-8
 
 colorscheme brogrammer
-"colorscheme xcodelighthc
 
 set number
 set relativenumber
@@ -14,6 +13,8 @@ set autoread
 set expandtab
 set smartindent
 set nocompatible
+set splitbelow
+set splitright
 
 autocmd FileType crontab setlocal nobackup nowritebackup
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
