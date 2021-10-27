@@ -15,17 +15,29 @@ let g:which_key_map = {}
 let g:which_key_map.p = { 'name': 'which_key_ignore' }
 let g:which_key_map.b = { 'name': 'which_key_ignore' }
 
-let g:which_key_map['f'] = { 'name' : 'Files',
-	       \ 'r' : ['Ranger', 'Find Files (Ranger)'],
-	       \ 'F' : ['call fzf#run()', 'Find Files (FZF)'],
+let g:which_key_map['f'] = { 'name' : 'FZF',
+	       \ 'F' : ['Files', 'Find Files (FZF)'],
 	       \ 'f' : ['MyGF', 'Find All Files (Custom GFiles)'],
+	       \ 'g' : ['GFiles?', 'Git Files (git status)'],
+	       \ 'l' : ['BLines', 'Lines in current buffer'],
+	       \ 'L' : ['Lines', 'Lines for all buffers'],
+	       \ 'c' : ['BCommits', 'Commits for current buffer'],
+	       \ 'C' : ['Commits', 'Commits for all buffer'],
 	       \ 's' : ['w', 'Save File'],
                \ 'S' : ['wa', 'Save All Files'],
 	       \ 'x' : ['x', 'Save & Close'],
                \ }
 
+"----- Buffers
+let g:which_key_map.b = { 'name' : 'Buffers',
+               \ 'n' : ['BufferNext', 'Next Buffer'],
+               \ 'p' : ['BufferPrevious', 'Previous Buffer'],
+               \ }
 
-let g:which_key_map.w = { 'name' : '+ Windows',
+let g:which_key_map.r = ['Ranger', 'Ranger File Browser']
+
+
+let g:which_key_map.w = { 'name' : 'Windows',
 	       \ 'd' : ['close', 'Close Window'],
 	       \ 's' : ['split', 'Horizontal Split'],
 	       \ 'v' : ['vsplit', 'Vertical Split'],
@@ -62,8 +74,14 @@ let g:which_key_map.t = { 'name' : 'Testing',
                \ 'r' : ['!gcc -o main % && ./main', 'Compile & Run'],
                \ }
 
+"----- Search
+let g:which_key_map.s = { 'name' : 'Search',
+               \ 'a' : ['Ag', 'Search with SilverSurfer'],
+               \ 'r' : ['Rg', 'Search with Ripgrip'],
+               \ }
+
 "----- Quit
-let g:which_key_map.q = { 'name' : '+ Quit',
+let g:which_key_map.q = { 'name' : 'Quit',
                \ 'q' : ['qa', 'Quit All'],
                \ 'Q' : ['qa!', 'Force Quit All'],
                \ }

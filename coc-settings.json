@@ -22,5 +22,6 @@
   "rust-analyzer.procMacro.enable": true,
   "html.format.enable": true,
   "deno.unstable": true,
-  "deno.config": "./tsconfig.json"
+  "deno.config": "./tsconfig.json",
+  "highlight.colors.enable": true
 }

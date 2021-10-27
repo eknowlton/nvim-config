@@ -68,5 +68,13 @@ Plug 'hashivim/vim-terraform'
 
 Plug 'ruanyl/vim-gh-line'
 
+Plug 'RRethy/vim-illuminate'
+
+Plug 'lambdalisue/suda.vim'
+
+Plug 'ryanoasis/vim-devicons'
+
+Plug 'mhinz/vim-startify'
+
 " Initialize plugin system
 call plug#end()
