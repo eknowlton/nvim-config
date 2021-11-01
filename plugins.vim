@@ -7,7 +7,10 @@ Plug 'tpope/vim-sensible'
 Plug 'liuchengxu/vim-which-key'
 
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'tpope/vim-fugitive'
+
 Plug 'rbong/vim-flog'
 
 Plug 'Shougo/denite.nvim'
