@@ -23,7 +23,7 @@ autocmd FileType zsh setlocal ts=2 sts=2 sw=2
 autocmd FileType sh setlocal ts=2 sts=2 sw=2
 autocmd FileType c setlocal ts=4 sts=4 sw=4
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2
-autocmd FileType typescript.tsx setlocal ts=2 sts=2 sw=2
+autocmd FileType typescriptreact setlocal ts=2 sts=2 sw=2
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2
 autocmd FileType php setlocal ts=4 sts=4 sw=4
 autocmd FileType ccpp setlocal ts=4 sts=4 sw=4
@@ -36,8 +36,8 @@ au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=ansible
 
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
-autocmd BufEnter *.tsx set filetype=typescript.jsx
-autocmd BufEnter *.jsx set filetype=javascript.jsx
+autocmd BufEnter *.tsx set filetype=typescriptreact
+autocmd BufEnter *.jsx set filetype=javascriptreact
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
@@ -181,6 +181,8 @@ function! g:committia_hooks.edit_open(info)
     imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
     imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
 endfunction
+
+set fillchars+=vert:\ 
 
 set secure
 set mouse=a

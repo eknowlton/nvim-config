@@ -80,5 +80,7 @@ Plug 'mhinz/vim-startify'
 
 Plug 'rhysd/committia.vim'
 
+Plug 'peitalin/vim-jsx-typescript'
+
 " Initialize plugin system
 call plug#end()
