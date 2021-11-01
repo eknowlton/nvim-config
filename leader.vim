@@ -59,7 +59,7 @@ let g:which_key_map.g = { 'name' : 'Git',
                \ 'F' : ['Git pull', 'Git Pull'],
                \ 'P' : ['Git push', 'Git Push'],
                \ 'r' : ['Gread', 'Git Reset File'],
-               \ 's' : ['Gstatus', 'Git Status'],
+               \ 's' : ['Git', 'Git Status'],
                \ 'g' : ['Flog', 'Git Flog'],
                \ 'G' : ['Flogsplit', 'Git Flogsplit'],
                \ }
@@ -78,6 +78,7 @@ let g:which_key_map.t = { 'name' : 'Testing',
 let g:which_key_map.s = { 'name' : 'Search',
                \ 'a' : ['Ag', 'Search with SilverSurfer'],
                \ 'r' : ['Rg', 'Search with Ripgrip'],
+               \ 'R' : ['<Plug>(coc-references)', 'Find All References']
                \ }
 
 "----- Quit

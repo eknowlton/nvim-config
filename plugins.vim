@@ -62,6 +62,8 @@ Plug 'prettier/vim-prettier', {
     \ 'html',
     \ 'swift' ] }
 
+Plug 'leafgarland/typescript-vim'
+
 Plug 'jparise/vim-graphql'
 
 Plug 'hashivim/vim-terraform'
@@ -75,6 +77,8 @@ Plug 'lambdalisue/suda.vim'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'mhinz/vim-startify'
+
+Plug 'rhysd/committia.vim'
 
 " Initialize plugin system
 call plug#end()
